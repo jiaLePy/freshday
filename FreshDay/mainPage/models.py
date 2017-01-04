@@ -42,10 +42,3 @@ class destAddrInfo(models.Model):
     tel=models.IntegerField()
     postcode=models.IntegerField()
 
-
-
-
-
-
-
-
