@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 import views
 
-urlpatterns=[
-    url(r'^site$',views.user_center_site),
-
+urlpatterns = [
+    url(r'^cart$',views.cart),
+    url(r'^order$',views.order),
 ]

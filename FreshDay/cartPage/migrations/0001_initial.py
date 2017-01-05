@@ -91,6 +91,11 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(to='cartPage.TypeInfo'),
         ),
         migrations.AddField(
+            model_name='destaddrinfo',
+            name='username',
+            field=models.ForeignKey(to='cartPage.UserInfo'),
+        ),
+        migrations.AddField(
             model_name='cartinfo',
             name='cgoods',
             field=models.ForeignKey(to='cartPage.GoodsInfo'),

@@ -37,6 +37,7 @@ class OrderDetailInfo(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
 class destAddrInfo(models.Model):
+    username=models.ForeignKey('UserInfo')
     name=models.CharField(max_length=40)
     addr=models.CharField(max_length=100)
     tel=models.IntegerField()
