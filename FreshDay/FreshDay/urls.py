@@ -18,8 +18,15 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+<<<<<<< HEAD
     url(r'^',include('mainPage.urls')),
     #url(r'^regPage/',include('regPage.urls')),
     #url(r'^listPage/',include('listPage.urls')),
     #url(r'^cartPage/',include('cartPage.urls')),
+=======
+    # url(r'^',include('mainPage.urls')),
+    # url(r'^regPage/',include('regPage.urls')),
+    url(r'^listPage/',include('listPage.urls')),
+    # url(r'^cartPage/',include('cartPage.urls')),
+>>>>>>> 0c32f7fe0ea09a92367801d1cb8923303de358ea
 ]
