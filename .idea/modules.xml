@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FreshDay/.idea/FreshDay.iml" filepath="$PROJECT_DIR$/FreshDay/.idea/FreshDay.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/freshday.iml" filepath="$PROJECT_DIR$/.idea/freshday.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../projects/.idea/projects.iml" filepath="$PROJECT_DIR$/../../projects/.idea/projects.iml" />
     </modules>

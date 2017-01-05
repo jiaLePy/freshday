@@ -10,9 +10,5 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12 virtualenv at /home/python/.virtualenvs/django_study_py2" project-jdk-type="Python SDK" />
-=======
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12 virtualenv at ~/.virtualenvs/django4" project-jdk-type="Python SDK" />
->>>>>>> 210505e38473ac235b5e58b0643cd6bc50fe558c
 </project>

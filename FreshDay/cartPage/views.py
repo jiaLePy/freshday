@@ -16,7 +16,7 @@ def cart(request):
         cart=CartInfo.objects.filter(cuser_id=user_id)  #当前用户要买的所有商品
         dic=[]
         for temp in cart:
-            dic.append({'goods':temp.cgoods.gtitle,'count':temp.count,'price':temp.cgoods.gprice,'pic':temp.cgoods.gpic})
+            dic.append({'goods':temp.cgoods.gtitle,'count':temp.count,'price':temp.cgoods.gprice,'pic':temp.cgoods.gpic,'tprice':temp.count*temp.cgoods.gprice})
         li={'t':'购物车'}
         con={'tt':li,'t2':dic}
         return render(request,'cartPage/cart.html',con)
