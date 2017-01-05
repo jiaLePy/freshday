@@ -1,4 +1,6 @@
 from django.db import models
+from tinymce.models import HTMLField
+from django.utils.html import format_html
 
 class UserInfo(models.Model):
     uname = models.CharField(max_length=20, unique=True)
@@ -7,6 +9,8 @@ class UserInfo(models.Model):
     tel = models.IntegerField()
     isDelete = models.BooleanField(default=False)
     email = models.CharField(max_length=40, unique=True)
+    def hContent(self):
+        return format_html(self.hcontent)
 
 class TypeInfo(models.Model):
     title = models.CharField(max_length=100)
@@ -36,16 +40,9 @@ class OrderDetailInfo(models.Model):
     count = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
-class destAddrInfo(models.Model):
-    name=models.CharField(max_length=40)
+class DestAddrInfo(models.Model):
+    name=models.ForeignKey('UserInfo')
     addr=models.CharField(max_length=100)
     tel=models.IntegerField()
     postcode=models.IntegerField()
-
-
-
-
-
-
-
 
