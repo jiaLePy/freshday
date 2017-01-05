@@ -18,10 +18,9 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='destAddrInfo',
+            name='DestAddrInfo',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(max_length=40)),
                 ('addr', models.CharField(max_length=100)),
                 ('tel', models.IntegerField()),
                 ('postcode', models.IntegerField()),
@@ -89,6 +88,11 @@ class Migration(migrations.Migration):
             model_name='goodsinfo',
             name='gtype',
             field=models.ForeignKey(to='mainPage.TypeInfo'),
+        ),
+        migrations.AddField(
+            model_name='destaddrinfo',
+            name='name',
+            field=models.ForeignKey(to='mainPage.UserInfo'),
         ),
         migrations.AddField(
             model_name='cartinfo',
