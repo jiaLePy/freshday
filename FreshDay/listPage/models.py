@@ -6,6 +6,8 @@ from django.db import models
 class TypeInfo(models.Model):
     title = models.CharField(max_length=100)
     isDelete = models.BooleanField(default=False)
+    def __str__(self):
+        return self.title.encode('utf-8')
 
 class GoodsInfo(models.Model):
     gtitle = models.CharField(max_length=20)
@@ -14,3 +16,5 @@ class GoodsInfo(models.Model):
     gdesc = models.CharField(max_length=1000)
     gpic=models.ImageField(upload_to='goods/')
     isDelete = models.BooleanField(default=False)
+    def __str__(self):
+        return self.gtitle.encode('utf-8')
