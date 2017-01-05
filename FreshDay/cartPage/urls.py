@@ -4,4 +4,5 @@ import views
 urlpatterns = [
     url(r'^cart$',views.cart),
     url(r'^order$',views.order),
+    url(r'^loginTest/$',views.loginTest)
 ]

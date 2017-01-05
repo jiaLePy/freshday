@@ -1,3 +1,4 @@
+#coding=utf-8
 from django.db import models
 
 class UserInfo(models.Model):
@@ -20,16 +21,17 @@ class GoodsInfo(models.Model):
     gpic=models.ImageField(upload_to='goods/')
     isDelete = models.BooleanField(default=False)
 
+#购物车信息
 class CartInfo(models.Model):
     cuser = models.ForeignKey('UserInfo')
     cgoods = models.ForeignKey('GoodsInfo')
     count = models.IntegerField(default=0)
-
+#订单信息
 class OrderInfo(models.Model):
     ouser = models.ForeignKey('UserInfo')
     ototal = models.DecimalField(max_digits=8, decimal_places=2)
     state = models.BooleanField(default=False)
-
+#订单详情
 class OrderDetailInfo(models.Model):
     order = models.ForeignKey('OrderInfo')
     goods = models.ForeignKey('GoodsInfo')
