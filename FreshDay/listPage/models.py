@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 
+
 class TypeInfo(models.Model):
     title = models.CharField(max_length=100)
     isDelete = models.BooleanField(default=False)
-
 
 class GoodsInfo(models.Model):
     gtitle = models.CharField(max_length=20)
